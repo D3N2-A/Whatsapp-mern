@@ -1,5 +1,12 @@
-import { AttachFile, MoreVert, SearchOutlined } from "@mui/icons-material";
+import {
+  AttachFile,
+  InsertEmoticon,
+  MoreVert,
+  SearchOutlined,
+} from "@mui/icons-material";
 import { Avatar, IconButton } from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
+import MicIcon from "@mui/icons-material/Mic";
 import React from "react";
 import "./chat.css";
 const Chat = () => {
@@ -39,6 +46,22 @@ const Chat = () => {
           This is a message
           <span className="chat__timestamp">{new Date().toUTCString()}</span>
         </p>
+      </div>
+      <div className="chat__footer">
+        <IconButton>
+          <InsertEmoticon style={{ fontSize: "24px", color: "#aebac1" }} />
+        </IconButton>
+        <form>
+          <input type="text" placeholder="Type a message" />
+          <button type="submit" className="sb">
+            <IconButton>
+              <SendIcon style={{ fontSize: "24px", color: "#aebac1" }} />
+            </IconButton>
+          </button>
+          <IconButton>
+            <MicIcon style={{ fontSize: "24px", color: "#aebac1" }} />
+          </IconButton>
+        </form>
       </div>
     </div>
   );

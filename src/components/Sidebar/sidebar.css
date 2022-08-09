@@ -67,10 +67,10 @@ textarea {
   overflow-y: scroll;
 }
 .sidebar__chats::-webkit-scrollbar {
-  width: 0.5vw;
-
+  width: 3px;
   background-color: #111b21;
 }
 .sidebar__chats::-webkit-scrollbar-thumb {
-  background-color: #8696a0;
+  opacity: 0.3;
+  background-color: #8696a06f;
 }

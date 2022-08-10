@@ -16,13 +16,13 @@ const Sidebar = () => {
         />
         <div className="sidebar__headerRight">
           <IconButton>
-            <DonutLarge style={{ fontSize: "20px", color: "#aebac1" }} />
+            <DonutLarge style={{ fontSize: "24px", color: "#aebac1" }} />
           </IconButton>
           <IconButton>
-            <Chat style={{ fontSize: "20px", color: "#aebac1" }} />
+            <Chat style={{ fontSize: "24px", color: "#aebac1" }} />
           </IconButton>
           <IconButton>
-            <MoreVertIcon style={{ fontSize: "20x", color: "#aebac1" }} />
+            <MoreVertIcon style={{ fontSize: "24x", color: "#aebac1" }} />
           </IconButton>
         </div>
       </div>

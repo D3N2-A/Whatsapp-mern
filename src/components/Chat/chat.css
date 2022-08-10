@@ -102,14 +102,14 @@
   margin-left: 10px;
   margin-right: 5px;
   background-color: #2a3942;
-  padding-left: 6px;
-  border-radius: 20px;
+  padding-left: 8px;
+  border-radius: 8px;
   color: #ffffff;
 }
 .sb {
   padding-left: 3px;
-  background: #202c33;
-  border-radius: 50%;
+background: #202c33;
+    border-radius: 50%;
   color: #8696a0;
   padding: 0px;
   border: none;

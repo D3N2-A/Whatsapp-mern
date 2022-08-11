@@ -7,9 +7,21 @@ import {
 import { Avatar, IconButton } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import MicIcon from "@mui/icons-material/Mic";
-import React from "react";
+import React, { useState } from "react";
 import "./chat.css";
+import axios from "../../axios";
 const Chat = ({ messages }) => {
+  const [input, setInput] = useState("");
+  const sendMessage = async (e) => {
+    // e.preventDefault();
+    await axios.post("./messages/new", {
+      name: "Room name",
+      message: input,
+      timestamp: "just now",
+      received: true,
+    });
+    setInput("");
+  };
   return (
     <div className="chat">
       <div className="chat__header">
@@ -50,8 +62,13 @@ const Chat = ({ messages }) => {
           <InsertEmoticon style={{ fontSize: "24px", color: "#aebac1" }} />
         </IconButton>
         <form>
-          <input type="text" placeholder="Type a message" />
-          <button type="submit" className="sb">
+          <input
+            value={input}
+            type="text"
+            placeholder="Type a message"
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button type="submit" className="sb" onClick={sendMessage}>
             <IconButton>
               <SendIcon style={{ fontSize: "24px", color: "#aebac1" }} />
             </IconButton>
